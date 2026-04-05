@@ -1,7 +1,7 @@
 <div align="center">
   
-  ![](https://badgen.net/badge/icon/windows?icon=windows&label) ![](https://badgen.net/github/release/mierne/windhelm/)
-  ##### Originally created by Mierne
+  ![](https://badgen.net/badge/icon/windows?icon=windows&label) ![](https://badgen.net/github/release/katinette/windhelm/)
+  ##### Originally created by Katiquette
 </div>
 
 # About
