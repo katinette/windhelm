@@ -244,7 +244,7 @@ CALL "%winLoc%\data\functions\inventory_viewer.bat"
 GOTO :dashboard
 
 :character_view
-mode con: cols=113 lines=22
+mode con: cols=113 lines=24
 set "RETURN=character_view"
 cls
 echo.
@@ -256,6 +256,7 @@ echo ^| HP: %player.health%/%player.health_max% ^| XP: %player.xp%/%player.xp_re
 echo ^| NAME: %player.name% ^| RACE: %player.race% ^| CLASS: %player.class% ^| ORIGIN: %player.origin%
 echo +---------------------------------------------------------------------------------------------------------------+
 echo ^| WEAPON: %player.weapon_equipped% ^| DAMAGE: %player.skill_damage% ^| ATHLETICS: %player.skill_athletics% ^| SPEECH: %player.skill_speech% ^| INTELLIGENCE: %player.skill_intelligence%
+echo ^| SPELL: %player.spell_equipped% ^| DAMAGE: %player.spell_damage% ^| COST: %player.spell_cost% ^| TYPE: %player.spell_equipped_type%
 echo ^| WEAPON PROFICIENCY: %player.proficiency% ^| EQUIPPED WEAPON PROFICIENCY: %player.weapon_proficiency%
 echo +---------------------------------------------------------------------------------------------------------------+
 echo ^| BANDITS SLAIN: %player.bandits_slain%
