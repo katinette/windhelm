@@ -1,14 +1,14 @@
 TITLE (SLoP) - Intialization
 REM Save, Load, order (and initialization) Program
 
-REM Variables needed to make Windhelm work are loaded here.
+REM Initialization
 :BASE_SET
 SET "player.message=..."
 SET "windhelm.inventory_call=passive"
-REM Other values
-SET "windhelm.vn=UNSTABLE-0.4.1_00-260320"
-SET "windhelm.ut=A Mighty Gale"
-SET windhelm.enable_stability_warning=1
+REM Version information
+SET "windhelm.vn=UNSTABLE-0.4.1_00-260429"
+SET "windhelm.ut=Steady on"
+SET windhelm.enable_stability_warning=0
 rem Enemy favored element determines which they are immune to
 SET "windhelm.foe_bandit_favored_element=None"
 SET "windhelm.foe_abyssal_guardian_favored_element=None"
