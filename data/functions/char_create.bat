@@ -261,6 +261,7 @@ SET "player.proficiency=staff"
 set player.item_ornate_wooden_staff_owned=1
 set "player.spell_equipped=Firebolt"
 set "player.spell_equipped_type=damage"
+set player.spell_damage=%windhelm.spell_firebolt_damage%
 set "player.weapon_equipped=%windhelm.item_wooden_staff_name%"
 set player.damage=%windhelm.item_wooden_staff_damage%
 set player.skill_intelligence+=windhelm.item_wooden_staff_int_modifier
