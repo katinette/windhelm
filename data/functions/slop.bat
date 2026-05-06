@@ -6,7 +6,7 @@ REM Initialization
 SET "player.message=..."
 SET "windhelm.inventory_call=passive"
 REM Version information
-SET "windhelm.vn=UNSTABLE-0.4.1_00-260429"
+SET "windhelm.vn=STABLE-0.4.2_00-260505"
 SET "windhelm.ut=Steady on"
 SET windhelm.enable_stability_warning=0
 rem Enemy favored element determines which they are immune to

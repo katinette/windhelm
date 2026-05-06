@@ -21,7 +21,7 @@ IF /I "%CH%" == "2" GOTO :VIEW_TYPE_ARMORS
 IF /I "%CH%" == "3" GOTO :VIEW_TYPE_TONICS
 if /i "%CH%" == "4" goto :VIEW_TYPE_SPELLS
 if /i "%CH%" == "5" goto :VIEW_TYPE_STAVES
-IF /I "%CH%" == "E" GOTO :AUTOSAVE
+IF /I "%CH%" == "Q" GOTO :AUTOSAVE
 GOTO :INVALID_INPUT
 
 REM Displays the categories of weapons and allows the Player to view their owned items in each.
@@ -51,7 +51,7 @@ IF /I "%CH%" == "1" GOTO :VIEW_CATEGORY_SWORDS
 IF /I "%CH%" == "2" GOTO :VIEW_CATEGORY_AXES
 IF /I "%CH%" == "3" GOTO :VIEW_CATEGORY_MACES
 IF /I "%CH%" == "4" GOTO :VIEW_CATEGORY_BOWS
-IF /I "%CH%" == "E" GOTO :IVM
+IF /I "%CH%" == "Q" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays weapons in the "swords" category.
@@ -73,7 +73,8 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_LONG_SWORD
 IF /I "%CH%" == "2" GOTO :INSPECT_SHORT_SWORD
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific weapon.
@@ -97,6 +98,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_LONG_SWORD
 IF /I "%CH%" == "U" GOTO :UNEQUIP_LONG_SWORD
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_SWORDS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Longsword as the Player's active weapon.
@@ -161,6 +163,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_SHORT_SWORD
 IF /I "%CH%" == "U" GOTO :UNEQUIP_SHORT_SWORD
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_SWORDS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Longsword as the Player's active weapon.
@@ -224,7 +227,8 @@ ECHO ^| [1 / GREAT AXE (%player.item_great_axe_owned%) ]
 ECHO +--------------------------------------------------------------------------------------------------+
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_GREAT_AXE
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific weapon.
@@ -248,6 +252,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_GREAT_AXE
 IF /I "%CH%" == "U" GOTO :UNEQUIP_GREAT_AXE
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_AXES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Great Axe as the Player's active weapon.
@@ -310,7 +315,8 @@ ECHO ^| [1 / MACE (%player.item_mace_owned%) ]
 ECHO +--------------------------------------------------------------------------------------------------+
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_MACE
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific weapon.
@@ -334,6 +340,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_MACE
 IF /I "%CH%" == "U" GOTO :UNEQUIP_MACE
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_MACES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Mace as the Player's active weapon.
@@ -396,7 +403,8 @@ ECHO ^| [1 / WOODEN BOW (%player.item_wooden_bow_owned%) ]
 ECHO +--------------------------------------------------------------------------------------------------+
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_WOODEN_BOW
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_WEAPONS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific weapon.
@@ -420,6 +428,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_WOODEN_BOW
 IF /I "%CH%" == "U" GOTO :UNEQUIP_WOODEN_BOW
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_BOWS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Wooden Bow as the Player's active weapon.
@@ -488,7 +497,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :VIEW_CATEGORY_LIGHT_ARMOR
 IF /I "%CH%" == "2" GOTO :VIEW_CATEGORY_MEDIUM_ARMOR
 IF /I "%CH%" == "3" GOTO :VIEW_CATEGORY_HEAVY_ARMOR
-IF /I "%CH%" == "E" GOTO :IVM
+IF /I "%CH%" == "Q" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays armor in the "light armor" category.
@@ -510,7 +519,8 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_CACTUS_ARMOR
 IF /I "%CH%" == "2" GOTO :INSPECT_GUARD_ARMOR
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific armor.
@@ -533,6 +543,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_CACTUS_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_CACTUS_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_LIGHT_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Cactus Armor as the Player's active armor.
@@ -593,6 +604,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_GUARD_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_GUARD_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_LIGHT_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Guard Armor as the Player's active armor.
@@ -652,7 +664,8 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_STONE_ARMOR
 IF /I "%CH%" == "2" GOTO :INSPECT_IRON_ARMOR
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific armor.
@@ -675,6 +688,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_IRON_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_IRON_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_MEDIUM_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Iron Armor as the Player's active armor.
@@ -735,6 +749,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_STONE_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_STONE_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_MEDIUM_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_STONE_ARMOR
@@ -793,7 +808,8 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_STEEL_ARMOR
 IF /I "%CH%" == "2" GOTO :INSPECT_SCALE_ARMOR
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_ARMORS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific armor.
@@ -816,6 +832,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_STEEL_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_STEEL_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_HEAVY_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Steel Armor as the Player's active armor.
@@ -876,6 +893,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_SCALE_ARMOR
 IF /I "%CH%" == "U" GOTO :UNEQUIP_SCALE_ARMOR
 IF /I "%CH%" == "Q" GOTO :VIEW_CATEGORY_HEAVY_ARMOR
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Attempts to equip the Scale Armor as the Player's active armor.
@@ -934,7 +952,7 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_TONIC_HEALING
 IF /I "%CH%" == "2" GOTO :INSPECT_TONIC_MAGICKA
-IF /I "%CH%" == "E" GOTO :IVM
+IF /I "%CH%" == "Q" GOTO :IVM
 GOTO :INVALID_INPUT
 
 REM Displays detailed information of the specific tonic.
@@ -956,7 +974,8 @@ ECHO [C / CONSUME ] ^| [U / DISCARD ]
 SET /P "CH=> "
 IF /I "%CH%" == "C" GOTO :CONSUME_TONIC_HEALING
 IF /I "%CH%" == "U" GOTO :DISCARD_TONIC_HEALING
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_TONICS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_TONICS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :CONSUME_TONIC_HEALING
@@ -1016,7 +1035,8 @@ ECHO [C / CONSUME ] ^| [U / DISCARD ]
 SET /P "CH=> "
 IF /I "%CH%" == "C" GOTO :CONSUME_TONIC_MAGICKA
 IF /I "%CH%" == "U" GOTO :DISCARD_TONIC_MAGICKA
-IF /I "%CH%" == "E" GOTO :VIEW_TYPE_TONICS
+IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_TONICS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :DISCARD_TONIC_MAGICKA
@@ -1067,7 +1087,7 @@ ECHO +--------------------------------------------------------------------------
 SET /P "CH=> "
 IF /I "%CH%" == "1" GOTO :INSPECT_SPELL_FIREBOLT
 IF /I "%CH%" == "2" GOTO :INSPECT_SPELL_HEALINGHANDS
-IF /I "%CH%" == "E" GOTO :IVM
+IF /I "%CH%" == "Q" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :INSPECT_SPELL_FIREBOLT
@@ -1090,6 +1110,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_SPELL_FIREBOLT
 IF /I "%CH%" == "U" GOTO :UNEQUIP_SPELL_FIREBOLT
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_SPELLS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_SPELL_FIREBOLT
@@ -1137,6 +1158,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_SPELL_FIREBOLT
 IF /I "%CH%" == "U" GOTO :UNEQUIP_SPELL_FIREBOLT
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_SPELLS
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_SPELL_FIREBOLT
@@ -1209,6 +1231,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_STAFF_HJRALDER
 IF /I "%CH%" == "U" GOTO :UNEQUIP_STAFF_HJRALDER
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_STAVES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_STAFF_HJRALDER
@@ -1256,6 +1279,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_WOODEN_STAFF
 IF /I "%CH%" == "U" GOTO :UNEQUIP_WOODEN_STAFF
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_STAVES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_WOODEN_STAFF
@@ -1303,6 +1327,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_ORNATE_WOODEN_STAFF
 IF /I "%CH%" == "U" GOTO :UNEQUIP_ORNATE_WOODEN_STAFF
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_STAVES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_ORNATE_WOODEN_STAFF
@@ -1350,6 +1375,7 @@ SET /P "CH=> "
 IF /I "%CH%" == "E" GOTO :EQUIP_IA_STAFF
 IF /I "%CH%" == "U" GOTO :UNEQUIP_IA_STAFF
 IF /I "%CH%" == "Q" GOTO :VIEW_TYPE_STAVES
+IF /I "%CH%" == "QQ" GOTO :IVM
 GOTO :INVALID_INPUT
 
 :EQUIP_IA_STAFF

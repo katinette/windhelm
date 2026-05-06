@@ -89,7 +89,7 @@ SET "player.race=Human"
 GOTO :CHOOSE_CLASS
 
 :MORE_ALNFEI
-MODE con: cols=120 lines=21
+MODE con: cols=120 lines=23
 SET "RETURN=MORE_ALNFEI"
 CLS
 ECHO.
@@ -334,7 +334,7 @@ ECHO ^| the leaves told you that it must be sometime early in the morning. You l
 ECHO ^| pounding began to subside. This is when another realization hit you, you do not recall who you are. The only
 ECHO ^| memories are fading, and quick. You grab onto one before it slips away. Your name. Your name is %player.name%.
 ECHO ^|
-ECHO ^| The 'Forest Origin' provides the Player with +2 to INTELLIGENCE.
+ECHO ^| The 'Forest Origin' provides the Player with +2 to the INTELLIGENCE skill.
 ECHO +----------------------------------------------------------------------------------------------------------------------+
 ECHO [1 / PROCEED TO WINDHELM... ] ^| [E / BACK]
 SET /P "CH=> "
@@ -358,7 +358,7 @@ ECHO ^| Your memories are vague, more feelings than actual memories. You try to 
 ECHO ^| Only a faint, distant pain remains. Before it all slipped away, however, you managed to cling to one thing.
 ECHO ^| Your name. Your name is %player.name%.
 ECHO ^|
-ECHO ^| The 'Cabin Origin' provides the Player with +2 to DAMAGE.
+ECHO ^| The 'Cabin Origin' provides the Player with +2 to the DAMAGE skill.
 ECHO +----------------------------------------------------------------------------------------------------------------------+
 ECHO [1 / PROCEED TO WINDHELM... ] ^| [E / BACK]
 SET /P "CH=> "
@@ -382,7 +382,7 @@ ECHO ^| assume your silver tongue landed you the miserable spot which you slept.
 ECHO ^| sooner rather than later. Before you're able to take a single step you realize something. You have no idea who you
 ECHO ^| are. The only thing that remains is.. Your name. Your name is %player.name%.
 ECHO ^|
-ECHO ^| The 'Inn Origin' provides the Player with +2 to SPEECH.
+ECHO ^| The 'Inn Origin' provides the Player with +2 to the SPEECH skill.
 ECHO +----------------------------------------------------------------------------------------------------------------------+
 ECHO [1 / PROCEED TO WINDHELM... ] ^| [E / BACK]
 SET /P "CH=> "
