@@ -25,4 +25,4 @@ Windhelm also requires VBScript for several tasks, inclduing the animated level 
 Windhelm does not function as intended under WINE on Linux, but it hasn't been tested thoroughly and the issues encountered may be resolved through configuration changes.
 
 ## Contributions and suggestions
-Contributions are welcome, be civil when discussing issues and suggestions and be sure to read the license. Suggestions that are not relevant to Windhelm may be sent to my email: <ahoy@mierne.net>.
+Contributions are welcome, be civil when discussing issues and suggestions and be sure to read the license. Suggestions that are not relevant to Windhelm may be sent to my email: <hi@katiquette.net>.
