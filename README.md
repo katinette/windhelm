@@ -1,3 +1,6 @@
+# MOVED!
+This repository has been moved to my personally hosted [Forgejo instance](https://git.fatboyfiesta.net/katiquette/windhelm).
+
 <div align="center">
   
   ![](https://badgen.net/badge/icon/windows?icon=windows&label) ![](https://badgen.net/github/release/katinette/windhelm/)
